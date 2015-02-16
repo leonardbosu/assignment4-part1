@@ -113,6 +113,25 @@ if ($ready == 'true')
 	echo '<table border="1">
 	<tr><td>';
 
+	for ($i = $minMultiplier; $i < ($maxMultiplier +1); ++$i)
+	{
+		echo '<td>' . ($i);
+	}
+
+
+	for ($i = $minMultiplicand; $i < ($maxMultiplicand +1); ++$i)
+	{
+		echo '<tr><td>' . ($i);
+		for ($j = $minMultiplier; $j < ($maxMultiplier+1); ++$j)
+			{
+				echo '<td>' . ((minMultiplicand + $i) * (minMultiplier + $j));
+			}
+	}
+
+}
+
+/*
+
 	for ($i = 0; $i < ($maxMultiplier - $minMultiplier +1); ++$i)
 	{
 		echo '<td>' . ($minMultiplier + $i);
@@ -124,12 +143,10 @@ if ($ready == 'true')
 		echo '<tr><td>' . ($minMultiplicand + $i);
 		for ($j = 0; $j < ($maxMultiplier - $minMultiplier +1); ++$j)
 			{
-				echo '<td>' . ((minMultiplicand + $i +1) * (minMultiplier + $j +2));
+				echo '<td>' . ((minMultiplicand + $i +1) * (minMultiplier + $j +1));
 			}
 	}
-
-}
-
+*/
 ?>
 
 <?php
